@@ -3,10 +3,10 @@ let socket = io();
 let messageBox = document.getElementById('msg');
 let messageBody = document.getElementById('msginpt');
 let userName = "llll";
-let msgObj = {'username':userName, 'msg': messageBody.value}
+
 messageBox.addEventListener('click', (e) => {
     e.preventDefault();
-    
+    let msgObj = {'username':userName, 'msg': messageBody.value}
     if(messageBody.value) {
         socket.emit('new message', msgObj);
         messageBody.value = '';
