@@ -83,3 +83,15 @@ body {
 #startbtn:hover {
     background-color:#3c8d93;
 }
+.joined {
+    border: 1px solid #d9d7ca;
+    width: 20%;
+    margin: 0 auto;
+    color: #d9d7ca;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: small;
+    background: rgba(0,0,0,0.2);
+
+}
