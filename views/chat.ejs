@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
+    
+    <div class="joined">
+        You joined conversation
+    </div>
     <div class="sendmsg">
-        <form action="" method="post" autocomplete="off">
-            <input type="text">
-            <input type="submit" value="Send">
+        <form action="" autocomplete="off" id="msg">
+            <input type="text" id="msginpt">
+            <input type="submit" value="Send" id="sendbtn">
         </form>
     </div>
 
     <script src="../node_modules/socket.io/client-dist/socket.io.js"></script>
 
-    <script src="../public/script/script.js"></script>
+    <script src="../public/script/chat-script.js"></script>
 </body>
 </html>
