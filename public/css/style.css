@@ -1,0 +1,27 @@
+body {
+    background-color: #1f454d;
+}
+.sendmsg {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.sendmsg input[type = 'text'] {
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+.sendmsg input[type = 'submit'] {
+    width: 20%;
+    height: 40px;
+    background-color: #3c8d93;
+    color: #d9d7ca;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
