@@ -17,6 +17,8 @@ socket.on('new message', (msgObj) => {
     
     if(msgObj.username == userName) {
         appendSenderDiv(msgObj);
+    } else {
+        appendRecieverDiv(msgObj);
     }
 });
 
@@ -50,4 +52,25 @@ function appendSenderDiv(msgObj) {
     document.body.appendChild(messageDiv);
 }
 
+function appendRecieverDiv(msgObj) {
+    let messageDiv = document.createElement('div');
+    let senderDiv = document.createElement('div');
+    let contentDiv = document.createElement('div');
+    let dateDiv = document.createElement('div');
+
+    messageDiv.appendChild(senderDiv);
+    messageDiv.appendChild(contentDiv);
+    messageDiv.appendChild(dateDiv);
+
+    messageDiv.classList.add('receiver-msg');
+    senderDiv.classList.add('sender-name');
+    contentDiv.classList.add('msg-content');
+    dateDiv.classList.add('msg-date');
+
+    senderDiv.innerHTML = msgObj.username;
+    contentDiv.innerHTML = msgObj.msg;
+    dateDiv.innerHTML = msgObj.date;
+
+    document.body.appendChild(messageDiv);
+}
 
