@@ -2,7 +2,7 @@ let socket = io();
 
 let messageBox = document.getElementById('msg');
 let messageBody = document.getElementById('msginpt');
-let userName = "llll";
+let userName = location.href.split('?username=')[1];
 
 messageBox.addEventListener('click', (e) => {
     e.preventDefault();
@@ -16,13 +16,11 @@ messageBox.addEventListener('click', (e) => {
 socket.on('new message', (msgObj) => {
     let p = document.createElement('p');
     if(msgObj.username == userName) {
-        p.innerHTML = `${msgObj.username} says: ` +  msgObj.msg;
+        p.innerHTML = `${userName} says: ` +  msgObj.msg;
     }
     else {
         p.innerHTML = "xUUU";
     }
-    
-    
     document.body.appendChild(p);
 });
 
@@ -31,8 +29,9 @@ socket.on('new user', (username) => {
     newUserDiv.classList.add('joined');
     newUserDiv.innerHTML = `${username} joined conversation.`;
     document.body.appendChild(newUserDiv);
-    msgObj.username = "ffffffffffffffffff";
 } );
+
+
 
 
 
