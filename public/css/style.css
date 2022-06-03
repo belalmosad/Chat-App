@@ -136,6 +136,6 @@ body {
     margin-bottom: 10px;
     background-color: rgba(0,0,0, 0.4);
     border-radius: 5px;
-    margin-left: 5px;
-
+    position: relative;
+    left: 2%;
 }
