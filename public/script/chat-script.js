@@ -27,7 +27,7 @@ socket.on('new user', (username) => {
     let newUserDiv = document.createElement('div');
     newUserDiv.classList.add('joined');
     newUserDiv.innerHTML = `${username} joined conversation.`;
-    document.body.appendChild(newUserDiv);
+    document.getElementById('main').appendChild(newUserDiv);
 } );
 
 
@@ -50,7 +50,7 @@ function appendSenderDiv(msgObj) {
     contentDiv.innerHTML = msgObj.msg;
     dateDiv.innerHTML = msgObj.date;
 
-    document.body.appendChild(messageDiv);
+    document.getElementById('main').appendChild(messageDiv);
 }
 
 function appendRecieverDiv(msgObj) {
@@ -72,6 +72,6 @@ function appendRecieverDiv(msgObj) {
     contentDiv.innerHTML = msgObj.msg;
     dateDiv.innerHTML = msgObj.date;
 
-    document.body.appendChild(messageDiv);
+    document.getElementById('main').appendChild(messageDiv);
 }
 
