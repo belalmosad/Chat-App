@@ -6,6 +6,6 @@ startConversationButton.addEventListener('click', (e) => {
     if(username.trim().length) {
         socket.emit('new user', username);
     }
-    e.preventDefault();
+else {e.preventDefault();} 
     
 });
