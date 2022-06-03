@@ -116,6 +116,8 @@ body {
     font-weight: bold;
     font-size: large;
     padding: 5px 0px 5px 0px;
+    word-wrap: break-word;
+    max-width: 80%;
 }
 .msg-content {
     margin: 7px 0px 7px 7px;
