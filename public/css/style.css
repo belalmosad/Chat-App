@@ -133,6 +133,8 @@ body {
     color: #d9d7ca;
     font-size: small;
     padding: 5px 0px 5px 0px;
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
 .receiver-msg {
@@ -146,4 +148,27 @@ body {
 
 #main {
     padding-bottom: 100px;;
+}
+@media only screen and (max-width: 650px) {
+    #startbtn {
+        font-size: medium;
+        left: 16%;
+        width: 70%;
+    }
+    #username {
+        width: 80%;
+    }
+    .msg-date {
+        font-size: small;
+    }
+    .sender-msg {
+        width: 55%;
+        left: 45%;
+    }
+    .receiver-msg {
+        width: 55%;
+    }
+    .joined {
+        width: 55%;
+    }
 }
