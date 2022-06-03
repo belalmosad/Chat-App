@@ -1,10 +1,11 @@
 let socket = io();
 
-let messageBox = document.getElementById('msg');
+let messageButton = document.getElementById('sendbtn');
 let messageBody = document.getElementById('msginpt');
+
 let userName = location.href.split('?username=')[1].split('%20').join(' ');
 
-messageBox.addEventListener('click', (e) => {
+messageButton.addEventListener('click', (e) => {
     e.preventDefault();
     let msgObj = {'username':userName, 'msg': messageBody.value, 'date': new Date()}
     if(messageBody.value) {
