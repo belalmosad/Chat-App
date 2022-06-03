@@ -2,7 +2,7 @@ let socket = io();
 
 let messageBox = document.getElementById('msg');
 let messageBody = document.getElementById('msginpt');
-let userName = location.href.split('?username=')[1];
+let userName = location.href.split('?username=')[1].split('%20').join(' ');
 
 messageBox.addEventListener('click', (e) => {
     e.preventDefault();
