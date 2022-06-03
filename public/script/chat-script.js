@@ -6,7 +6,7 @@ let userName = location.href.split('?username=')[1];
 
 messageBox.addEventListener('click', (e) => {
     e.preventDefault();
-    let msgObj = {'username':userName, 'msg': messageBody.value}
+    let msgObj = {'username':userName, 'msg': messageBody.value, 'date': new Date()}
     if(messageBody.value) {
         socket.emit('new message', msgObj);
         messageBody.value = '';
@@ -16,7 +16,7 @@ messageBox.addEventListener('click', (e) => {
 socket.on('new message', (msgObj) => {
     let p = document.createElement('p');
     if(msgObj.username == userName) {
-        p.innerHTML = `${userName} says: ` +  msgObj.msg;
+        p.innerHTML = `${userName} says: ` +  msgObj.msg + ' on ' +msgObj.date;
     }
     else {
         p.innerHTML = "xUUU";
