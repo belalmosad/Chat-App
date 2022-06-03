@@ -14,14 +14,10 @@ messageBox.addEventListener('click', (e) => {
 });
 
 socket.on('new message', (msgObj) => {
-    let p = document.createElement('p');
+    
     if(msgObj.username == userName) {
-        p.innerHTML = `${userName} says: ` +  msgObj.msg + ' on ' +msgObj.date;
+        appendSenderDiv(msgObj);
     }
-    else {
-        p.innerHTML = "xUUU";
-    }
-    document.body.appendChild(p);
 });
 
 socket.on('new user', (username) => {
@@ -32,6 +28,26 @@ socket.on('new user', (username) => {
 } );
 
 
+function appendSenderDiv(msgObj) {
+    let messageDiv = document.createElement('div');
+    let senderDiv = document.createElement('div');
+    let contentDiv = document.createElement('div');
+    let dateDiv = document.createElement('div');
 
+    messageDiv.appendChild(senderDiv);
+    messageDiv.appendChild(contentDiv);
+    messageDiv.appendChild(dateDiv);
+
+    messageDiv.classList.add('sender-msg');
+    senderDiv.classList.add('sender-name');
+    contentDiv.classList.add('msg-content');
+    dateDiv.classList.add('msg-date');
+
+    senderDiv.innerHTML = msgObj.username;
+    contentDiv.innerHTML = msgObj.msg;
+    dateDiv.innerHTML = msgObj.date;
+
+    document.body.appendChild(messageDiv);
+}
 
 
