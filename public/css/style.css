@@ -162,11 +162,11 @@ body {
         font-size: small;
     }
     .sender-msg {
-        width: 55%;
-        left: 45%;
+        width: 40%;
+        left: 58%;
     }
     .receiver-msg {
-        width: 55%;
+        width: 40%;
     }
     .joined {
         width: 55%;
