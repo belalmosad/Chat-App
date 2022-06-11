@@ -1,6 +1,8 @@
 # Chat App
 Simple Real Time Chat application using nodejs, express, and socket.io
 
+**Live Demo**: https://chat-app-socket--node.herokuapp.com/
+
 ## Technologies used:
 ### **Front-End**:
 - EJS (Template Engine)
