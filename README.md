@@ -25,3 +25,8 @@ Simple Real Time Chat application using nodejs, express, and socket.io
     <img src='./assets/images/chat-1.PNG' width='48%' >
     <img src='./assets/images/chat-2.PNG' width='48%' >
 </div>
+
+## Further Improvements
+- Add Support for sending documents.
+- Add Authentication and Authorization.
+- Add feature of creating rooms and servers (discord-like).
