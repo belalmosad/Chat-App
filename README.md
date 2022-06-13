@@ -16,7 +16,7 @@ Simple Real Time Chat application using nodejs, express, and socket.io
 #### Login Form
 
 <div style='margin: 0 auto; width: 50%;'>
-    <img src='./assets/images/login.PNG' width='100%'>
+    <img src='./assets/images/login.PNG' width='50%'>
 </div>
 
 #### Chat between Two Sockets (clients). Sent and recieved messages appear differently as per client.
