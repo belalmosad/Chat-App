@@ -12,3 +12,10 @@ Simple Real Time Chat application using nodejs, express, and socket.io
 ### **Back-End**:
 - socket.io (for real-time communication and sockets).
 - NodeJs and Express (for creating server and handling endpoints).
+
+#### Chat between Two Sockets (clients). Sent and recieved messages appear differently as per client.
+
+<div style='display: flex; justify-content: space-around;'>
+    <img src='./assets/images/chat-1.PNG' width='48%' >
+    <img src='./assets/images/chat-2.PNG' width='48%' >
+</div>
